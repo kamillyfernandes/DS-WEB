@@ -1,7 +1,3 @@
 "# DS-WEB"  
-
--  Cursando ADS (Desenvolvimento de sistemss) 💻
--  Estou aprendendo HTML 
-- fale comigo por: Kamillyfer19@gmail.com 📩
-- Pronomes: Ela dela 🍓❤
-- fatos sobre mim: Mãe de pet 🐈"# DS-WEB" 
+ 
+- aprendemos a colocar imagem e mudar seu tamanho , a mudar a cor da fonte e tamanho e colocar  botão
