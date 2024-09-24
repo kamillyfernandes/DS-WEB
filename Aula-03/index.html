@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-03</title>
+</head>
+<body>
+
+    <h1>Bem vindo</h1>
+    <p>Este é um exemplo simples de uma página HTML.</p>
+    <h3>Lista não numeradas</h3>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <ul>
+            <li>Item 3</li>
+            <ul>
+                <li>Item 4</li>
+            </ul>
+         </ul>
+    </ul>
+    
+    <h3>Lista numeradas</h3>
+    <ol>
+        <li>Item</li>
+        <li>Item</li>
+        <ol>
+            <li>Definição</li>
+        </ol>
+    </ol>
+
+    <h3>Lista de Definição</h3>
+    <dl> <!--Lista de definição-->
+        <dt>HTML</dt>  <!--Topico a ser definido-->
+        <dd>Hypertext Markup Language</dd> <!--Qual a definição desse topico-->
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+
+
+    <h3>Elementos em nível de bloco</h3>
+    <p> Elemento em nível de bloco sempre começa em uma nova linha e os navegadores adicionam automaticamente algum espaço (uma margem) antes e depois do elemento.</p>
+
+    <p>Um elemento de nível de bloco sempre ocupa toda a largura disponível (estende-se para a esquerda e para a direita tanto quanto possível).</p>
+
+    <p>Dois elementos de bloco comumente usados ​​são: < p > e < div >.</p>
+
+    <p>O elemento < p > define um parágrafo em um documento HTML.</p>
+
+    <p>O elemento < div > define uma divisão ou seção em um documento HTML.</p>
+
+<h3>Div-Divisão, Seção ou Bloco.</h3> <!--alinhar itens, definir tamanho das coisas-->
+
+<div style="border:solid 1px; padding-left: 20px; margin-right: 20px; bo"> Olá, eu gosto de morangos 🍓</div>    
+<div style="background-color:black;color:white;pborder:solid 1px; padding-left: 20px; margin-right: 20px; bo;"> 
+<p></p>
+<br><br>
+    <h2>London</h2>
+    <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+ <br><br>
+    </div>
+
+<p>Minha mãe tem olhos <span style="color:blue;font-weight:bold;">azuis</span> e meu pai tem os olhos <span style="color:rgb(94, 137, 21);font-weight:bold;">verde escuro</span></p>
+<span>Minha mãe tem olhos azuis</span> <!--span é um print (exibir a informação )-->
+
+
+
+<!--Formulário Preencher Informações-->
+<br><br> <!--Quebra de linha-->
+
+    <h3>Imput - Tipos de entradas de dados</h3>
+        <label>Input do tipo Text</label> <!--Explicação do input (tipo um titulo para o input)-->
+        <input type="text"> <!--Formulário para Letras-->
+ <br><br>
+    <label>Input do tipo Number</label> 
+    <input type="number"> <!--Formulário para Números-->
+<br><br>
+    <label>Input do tipo password</label> 
+    <input type="password"> <!--Formulário para senha-->
+<br><br>
+    <input type="radio" value="HTML"> <!--caixa de seleção-->
+    <label>HTML</label>
+<br>
+    <input type="checkbox" value="CSS"> <!--Caixa de seleção com  check-->
+    <label>CSS</label>
+<br><br>
+    <input type="button" value="Botão de ação" > <!--Botão que você configura uma ação-->
+<br><br>
+    <input type="submit" value="Botão submit"> <!--Botão para enviar -->
+<br><br>
+
+
+ <h3>Form - Formulário</h3> <!--Agrupar todos os inputs, e decidir como vai enviar essa informação-->
+ <form action="" method="get" >
+    
+    <label>Nome de usuário</label><br> <!--Explicação do input -->
+    <input type="text" name="nome"><br> <!--name:nome da variavel -->
+<br>
+    <label>Campo com Value Preenchimedo</label><br> <!--Explicação do input -->
+    <input type="text" name="value" value="Campo com value"><br> <!--Já vem preenchido-->
+<br>
+    <label>Campo com Placeholder</label><br><!--Explicação do input -->
+    <input type=" text" name="placeholder" placeholder= "Campo que possuí placehorlder"><br> <!--informaçao fantasma, uma guia-->
+<br>
+    <label>campo com Required</label><br><!--Explicação do input -->
+    <input type="text" name="required" required><br>  <!--tornar esse campo obrigatorio para preencher-->
+<br>
+    <label> Campo com Maxlength</label><br> <!--Explicação do input -->
+    <input type="text" name="maxlength" maxlength="5"><br>  <!--Limita o numero de caracteres inceridos ex: tolera 5 caractere-->
+<br>
+    <label>Campo com Disabled</label><br> <!--Explicação do input-->
+    <input type="text" name="disabled" disabled><br> <!--vizualizar apenas-->
+<br>
+    <label>Campo com Readonly</label><br><!--Explicação do input -->
+    <input type="text" name="readonly" readonly><br> <!--somente ler copia a informaçao--> 
+<br>
+    <label> Campo com uma Boa Validação</label><br> <!--Explicação do input -->
+    <input type="text" name="BoaValidação" maxlength="8" required placeholder=" Campo boa validação"><br> <!--união de varios input-->
+   
+    <textarea name="mensagem"></textarea><br> <!--Usado para textos grandes, pois ele se configura conforme o tamanho da escrita-->
+<br> 
+        <select name="opcoes"> <!--criaçao da estrutura de option-->
+            <option>Opção 1</option>
+            <option>Opção 2</option>
+            <option>Opção 3</option>
+            <option>Opção 4</option>
+            <option>Opção 5</option>
+        </select>
+    
+     <input type="submit"> <!--Enviar arquivo-->
+
+    </form>
+    
+    <p><b>Name:</b> Nome do campo, utilizado no envio dos dados.</p> 
+    <p><b>value:</b> Valor padrão do campo.</p>
+    <p><b>placeholder:</b> Texto exibido dentro do campo até que o usuário comece a digitar.</p> 
+    <p><b>required:</b> Torna o campo obrigatório.</p>
+    <p><b>maxlength:</b>Limita o número de caracteres inseridos.</p>
+    <p><b>disabled:</b> Desabilita o campo, impedindo interação.</p>
+    <p><b>readonly:</b> Torna o campo apenas leitura.</p>
+
+</body>
+</html
