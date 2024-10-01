@@ -1,6 +1,26 @@
 body{
-    background-color: beige;
+    background-color: rgb(235, 203, 171);
 }
 h1{
-    color: rgb(79, 37, 10)
+    color: rgb(146, 78, 36) ;
+    text-align: center; (<!--deixar título no centro do app-->)
+}
+p{
+    font-family: Georgia; (<!--escolher forma da fonte-->)
+    font-size: 20PX; (<!--aumenta tamanho da fonte-->)
+    text-align: center;
+}
+.minha-div{
+    background-color: rgb(81, 25, 3);
+    color: rgb(211, 147, 106);
+    border: 2px solid rgb(200, 139, 40);
+    margin: 20px;
+    padding: 20px;
+}
+#minha-div{
+    background-color: rgb(65, 22, 5);
+    color: rgb(211, 147, 106);
+    border: 2px solid rgb(200, 139, 40);
+    margin: 20px;
+    padding: 20px;
 }
