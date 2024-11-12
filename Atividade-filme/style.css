@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+h1{
+    color: rgb(255, 255, 255) ;
+    text-align: center; 
+}
+button{
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);
+}
+.shadow{ /*primeiro joga pra direira, o segundo px para baixo*/
+    text-shadow: 3px 3px  rgb(75, 73, 73);
+}

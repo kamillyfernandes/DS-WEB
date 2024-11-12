@@ -1,0 +1,91 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #8a8cdb;
+}
+
+/* Formulário */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Título do formulário */
+form h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Rótulos e campos de entrada */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Campos de texto e senha */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Botão de envio */
+input[type="submit"] {
+    background-color: #6c63ff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #5a54db;
+}
+
+/* Campos de texto e senha */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Botão de envio */
+input[type="submit"] {
+    background-color: #6c63ff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #5a54db;
+}
