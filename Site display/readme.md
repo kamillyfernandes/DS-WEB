@@ -1,0 +1,1 @@
+criamos uma pagina com base em uma imagem envinada pelo bruno usando oq aprendemos na aula 07 e 08

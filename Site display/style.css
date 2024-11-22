@@ -1,0 +1,70 @@
+
+body {
+    margin: 0; /* Remove a margem padrão */
+    font-family: Arial, sans-serif;
+}
+.menu-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeaee;
+    padding: 5px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+    gap: 2.5cm; /* Define o espaçamento fixo entre os elementos */
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 2px 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* Mantendo o estilo original da div */
+div {
+    background-color: #fac6d4;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #ff3877;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    color: #df4c83;
+}
+
+p {
+    color: #df4c83;
+}
+
+nav {
+    height: 150px;
+    width: 200px;
+    display: inline-block; /* Ficar no lugar, fixando */
+    background-color: #fff8dc;
+}
+
+a {
+    display: block;
+    text-decoration: dotted;
+}
+
+img {
+    width: 100px; /* Largura/Altura px */
+    height: 100px;
+}
+a:link{
+    color: #b30939;
+}
