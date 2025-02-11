@@ -2,7 +2,7 @@
 var adicao1 = Number.parseInt(prompt("Digite o primeiro numero para adição"))
 var adicao2 = Number.parseInt(prompt("Digite o segundo para adição"))
 //Verificando o tipo da variavel
-console.log(typeof(adicao1))
+console.log(typeof(adicao1))//verificar o tipo da informação
 alert(adicao1 + adicao2)
 
 //subtração
