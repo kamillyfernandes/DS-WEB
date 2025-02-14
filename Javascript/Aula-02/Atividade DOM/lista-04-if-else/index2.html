@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--01- Programa para saber se o usuario é maior de idade-->
+
+    <h3>Informe sua idade:</h3>
+    <input type="number" id="valor">
+    <button onclick="Verificando()">Verificar !</button>
+    <p id="idade"></p>
+
+
+<!--02- verificando se o numero é positivo, negativo ou 0-->
+
+    <h3>Digite um número:</h3>
+    <input type="number" id="numero">
+    <button onclick="Verificar()">Enviar !</button>
+    <p id="resultados"></p>
+
+
+<!--03- LOGIN:Senha e usuario -->
+
+<style> /*style das div para ficar uma ao lado da outra*/
+    .input-container {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+</style>
+
+    <h3>Insira seu usuário e senha:</h3>
+    <div class="input-container">
+    <input type="text" id="login" required> <!--Required = Campo Obrigatorio-->
+    </div>
+    <div class="input-container">
+    <input type="text" id="senha1" required>
+    </div>
+
+    <div class="input-container">
+    <button onclick="Login()">Confirmar !</button>
+    </div>
+
+  
+    <p id="verificar"></p> <!-- Exibe a mensagem de erro ou boas-vindas -->
+
+
+<!--04- (adição,subtração, multiplicação ou divisão) -->
+
+    <h3>Insira dois números e escolha uma operação:</h3>
+
+    <input type="number" id="Numero1" required>
+    <input type="number" id="Numero2"  required>
+
+    <select id="operacao">
+        <option value="adição">Adição</option>
+        <option value="subtração">Subtração</option>
+        <option value="multiplicação">Multiplicação</option>
+        <option value="divisão">Divisão</option>
+    </select>
+
+    <button onclick="calcular()"> Calcular </button>
+
+    <p id="resposta"></p> <!-- Exibe o resultado -->
+
+
+<!--05- Descobrundo se o número e par ou ímpar-->  
+
+    <h3>Digite um número para saber se é impar ou par:</h3>
+    <input type="number" id="numero"> 
+    <button onclick="Verifica()"> Confirmar !</button>
+    <p id="calcular"></p>
+
+
+<!--06- insira 3 números e descubra o maior-->
+
+<h3>Insira três números e descubra qual é o maior:</h3>
+
+<p><input type="number" id="numero1" placeholder="Primeiro Número"></p> 
+<p><input type="number" id="numero2" placeholder="Segundo Número"></p>
+<p><input type="number" id="numero3" placeholder="Terceiro Número"></p>
+<button onclick="validacao()">Verificar ! </button>
+
+<p id="valido"></p>
+
+<!--07- Validação de Triângulos-->
+
+<h3>Insira o tamanho de três lados de um triângulo</h3>
+
+<p><input type="number" id="lado1" placeholder="Primeiro lado"></p> 
+<p><input type="number" id="lado2" placeholder="Segundo lado"></p>
+<p><input type="number" id="lado3" placeholder="Terceiro lado"></p>
+<button onclick="triangulo()">Verificar!</button>
+
+<p id="triangulo"></p>
+
+
+
+</body>
+<script src="script2.js"></script>
+</html>
+

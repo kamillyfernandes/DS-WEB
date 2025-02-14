@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!--01- Exibindo mensagem + nome--> 
+
+    <p>Insira seu nome:</p>
+    <input type="text" id="nome"> 
+    <button onclick="BotaoDeClick()"> Confirme!</button>
+    <br>
+    <p id="resultado"></p>
+
+<!--02- Descobrundo se o número e par ou ímpar-->  
+
+   <p>Digite um número para saber se é impar ou par:</p>
+    <input type="number" id="numero"> 
+    <button onclick="Verificar()"> Confirme!</button>
+    <p id="calcular"></p>
+
+<!--03- tranformando em MAIUSCULO--->
+
+    <p>Escreva aqui!</p>
+    <input type="text" id="frases"> 
+    <button onclick="Maiscula()">Confirme!</button>
+    <br>
+    <p id="frase"></p>
+        
+<!--04 Porcentagem --->
+
+
+    <p>Insira um valor:</p>
+    <input type="number" id="valor"> 
+
+    <p>Insira uma porcentagem:</p>
+    <input type="number" id="porcentagem"> 
+
+    <button onclick="Calculo()">Calcular!</button>
+    <p id="calculo"></p>
+
+
+<!--05 div mudando de cor com botão-->
+
+    <style> 
+        .minhaDiv { /* definindo o style do quadrado */
+            width: 200px; /* Largura*/
+            height: 200px; /*Altura*/
+            background-color: purple; /*cor dentro dele*/
+            margin: 20px; /*margim*/
+        }
+    </style>
+
+    <div class="minhaDiv"></div> <!--criando a div-->
+    <button onclick="Cor()">Aperte para mudar de Cor</button> <!--Botão para mudar de cor-->
+
+
+</body>
+<script src="script.js"></script>
+</html>
