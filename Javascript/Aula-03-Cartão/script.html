@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<input type="text" placeholder="Nome" id="nome">
+<input type="text" placeholder="Descrição" id="desc">
+<input type="button" value="CriarCartao" onclick="CriarCartao()">
+
+<script>
+
+function addElement() {
+ 
+  const newDiv = document.createElement("div");
+  const newContent = document.createTextNode("Hi there and greetings!");
+  newDiv.appendChild(newContent);
+
+  const currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+
+</script>
+<body>
+    
+</body>
+</html>

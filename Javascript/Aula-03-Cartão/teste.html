@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<input type="text" placeholder="Nome" id="nomeinput">
+<input type="text" placeholder="Descrição" id="desc">
+<input type="button" value="CriarCartao" onclick="CriarCartao()">
+
+<div id="divcartoes"> </div>
+<body>
+
+ <script> 
+    
+    
+    function CriarCartao(){
+
+    var div = document.createElement("div");
+    var nome = document.getElementById("nomeinput").value;
+    var desc = document.getElementById("desc").value;
+
+    div.style.background = 'gray';
+    div.style.height = '100px';
+    div.style.width = '200px';
+    div.textContent = `Cartão criado: ${nome} ${desc}`;
+    var divcontent = document.getElementById("divcartoes");
+    divcontent.appendChild(div);
+    div.setAttribute("id, div1");
+
+
+
+
+    var botaoExcluir = document.createElement("button");
+    botaoExcluir.textContent = "Excluir";
+    botaoExcluir.onclick = function() {
+    div.remove();
+};
+
+div.appendChild(botaoExcluir);
+ }
+
+var botaoExcluir = document.createElement("button");
+
+
+ botaoExcluir.textContent = "Excluir";
+
+botaoExcluir.onclick = function() {
+    div.remove();
+};
+
+div.appendChild(botaoExcluir);
+
+</script>
+</body>
+</html>
