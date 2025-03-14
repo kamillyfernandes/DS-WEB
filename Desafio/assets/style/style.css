@@ -1,0 +1,182 @@
+/* Código CSS do Menu Horizontal*/
+ul {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-inline-start: 0em;
+}
+
+li {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    list-style: none;
+}
+li .meumenu {
+   font-family: 'open_sansbold';
+   font-size: 1.6em;
+   text-decoration: none;
+   color: #4c4c4c;
+   border: 0 1px 0 0 #4c4c4c;
+   border-bottom: 4px solid transparent;
+}
+li .meumenu:hover {
+    border-bottom: 4px solid #4c4c4c;
+}
+li .meumenu-active {
+    border-bottom: 4px solid #e7c6b1;
+}
+.topicos {
+    text-align: left;
+}
+
+
+/* Código CSS do Formulario*/
+body {
+    background-color: #d6ccc2;
+}
+
+.container {
+    width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px 30px 30px;
+    border-radius: 8px;
+    background: #e7c6b1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form{
+    width: 90%;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px 0px 8px 0px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type=submit].hover:hover{
+    color: white;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input:hover[type=submit] {
+    background-color: #d1a78f;
+}
+textarea {
+
+    resize: none;
+
+}
+.erro-input{
+    color:rgb(255, 0, 0);
+    font-size: 15px;
+    
+}
+
+
+/*CSS da tabela produtos*/
+#produto {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#produto td, #produto th {
+    word-break: break-word;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    border: solid 1px black;
+}
+
+#produto tr:nth-child(even){
+    background-color: #e6e6e6;}
+
+#produto tr:hover {
+    background-color: #ddd;
+}
+
+#produto th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #e7c6b1;
+    color: black;
+    text-align: center;
+}
+#produto a{
+    text-decoration: none;
+    color: black;
+}
+#produto .link-alteracao {
+    text-decoration: none;
+    color: black;
+}
+#produto .link-exclusao {
+    text-decoration: none;
+    color: red;
+}
+
+/*estilização da tabela clientes*/
+
+#clientes {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#clientes td, #clientes th {
+    word-break: break-word;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    border: solid 1px black;
+}
+
+#clientes tr:nth-child(even){
+    background-color: #e6e6e6;}
+
+#clientes tr:hover {
+    background-color: #ddd;
+}
+
+#clientes th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #e7c6b1;
+    color: black;
+    text-align: center;
+}
+#clientes a{
+    text-decoration: none;
+    color: black;
+}
+#clientes .link-alteracao {
+    text-decoration: none;
+    color: black;
+}
+#clientes .link-exclusao {
+    text-decoration: none;
+    color: red;
+}
+
