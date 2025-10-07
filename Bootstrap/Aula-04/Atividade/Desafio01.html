@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha Loja - Página de Produtos</title>
+
+  <!-- Link do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Evita que o conteúdo fique escondido atrás da navbar fixa */
+    body {
+      padding-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar fixa -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Adot-me</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Container principal -->
+  <div class="container text-center mt-4">
+    <h1 class="text-primary fw-bold">Bem-vindo à Adot-me</h1>
+    <p class="text-secondary">Aqui você encontra os melhores animais pelo melhores preços!</p>
+
+    <!-- Grade de produtos -->
+    <div class="row mt-4 g-4">
+      <!-- Linha 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/b1/54/95/b15495f7a7ff276e97ddbb23bf1fb194.jpg" class="card-img-top" alt="Produto 1">
+          <div class="card-body">
+            <h5 class="card-title">Macaquinho</h5>
+            <p class="card-text">Bebê Macaquinho de Frauda</p>
+            <p class="fw-bold text-success">R$ 399,99</p>
+            <a href="#" class="btn btn-primary">Adotar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/42/8f/22/428f22c7ea222e63521f0f29074f81ce.jpg" class="card-img-top" alt="Produto 2">
+          <div class="card-body">
+            <h5 class="card-title">Raposa</h5>
+            <p class="card-text">Raposa Feliz</p>
+            <p class="fw-bold text-success">R$ 499,90</p>
+            <a href="#" class="btn btn-primary">Adotar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/d2/18/45/d21845374a64a1d2ae9f05b2bcf14ba0.jpg" class="card-img-top" alt="Produto 3">
+          <div class="card-body">
+            <h5 class="card-title">Cachorrinho</h5>
+            <p class="card-text">Cachorrinho com crocs</p>
+            <p class="fw-bold text-success">R$ 199,90</p>
+            <a href="#" class="btn btn-primary">Adotar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/60/4a/b4/604ab4be8c84f1af0729ade65bf70365.jpg" class="card-img-top" alt="Chachorrinhos">
+          <div class="card-body">
+            <h5 class="card-title">Ovelha</h5>
+            <p class="card-text">Ovelha feliz no campo</p>
+            <p class="fw-bold text-success">R$ 200,00</p>
+            <a href="#" class="btn btn-primary">Adotar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda linha -->
+    <div class="row mt-4 g-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/fb/31/86/fb31864c2c4c1ac26075166f40563a3d.jpg" class="card-img-top" alt="Produto 5">
+          <div class="card-body">
+            <h5 class="card-title">Rena</h5>
+            <p class="card-text">rena recem nascida</p>
+            <p class="fw-bold text-success">R$ 678,90</p>
+            <a href="#" class="btn btn-primary">Adotar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/7a/e1/70/7ae17020cdb4811d2814e50ca224dad2.jpg" class="card-img-top" alt="Produto 6">
+          <div class="card-body">
+            <h5 class="card-title">Porquinha</h5>
+            <p class="card-text">Porquinha princesa</p>
+            <p class="fw-bold text-success">R$ 189,90</p>
+            <a href="#" class="btn btn-primary">Adotar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/07/a4/04/07a4049a47119cc03908b8268643f66d.jpg" class="card-img-top" alt="Produto 7">
+          <div class="card-body">
+            <h5 class="card-title">Porco espinho</h5>
+            <p class="card-text">Bebê porco espinho de meia</p>
+            <p class="fw-bold text-success">R$ 109,90</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/a2/d7/86/a2d786ab9372ab8df45b4f57645ce111.jpg" class="card-img-top" alt="Produto 8">
+          <div class="card-body">
+            <h5 class="card-title">Pinguim</h5>
+            <p class="card-text">Bebê Pinguim</p>
+            <p class="fw-bold text-success">R$ 669,90</p>
+            <a href="#" class="btn btn-primary">Adotar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center p-3 mt-5">
+    © 2025 - Minha Loja | Desenvolvido com Bootstrap
+  </footer>
+
+  <!-- Script do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
