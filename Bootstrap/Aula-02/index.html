@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+
+     <!--Titulo do Site centralizado -->
+    <h1 class="text-center text-primary">Hello, world!</h1>
+
+      <hr><!--Divisão (linha)-->
+
+      <!--Botões com contorno-->
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+    <button type="button" class="btn btn-outline-light">Light</button>
+
+      <hr>
+
+       <!--estilizando as letras-->
+    <p class="fw-bold">Texto em negrito</p>
+    <p class="fw-light">Texto mais leve</p>
+    <p class="fst-italic">Texto em itálico</p>
+
+      <hr>
+  
+       <!--escolhendo onde o texto vai ficar -->
+    <p class="text-start">Esquerda</p>
+    <p class="text-center">Centro</p>
+    <p class="text-end">Direita</p>
+
+      <hr>
+
+       <!--mudando a cor dos textos-->
+    <p class="text-primary">Texto azul (primary)</p>
+    <p class="text-danger">Texto vermelho (danger)</p>
+    <p class="text-success">Texto verde (success)</p>
+    <p class="text-muted">Texto cinza apagado (muted)</p>
+    
+      <hr>
+
+      <!--mudando o fundo do texto,caso seja escuro diexe a fonte, text-white-->
+    <p class="bg-primary text-white">Fundo azul com texto branco</p>
+    <p class="bg-warning">Fundo amarelo (warning)</p>
+    <p class="bg-dark text-white">Fundo escuro com texto branco</p>
+
+      <hr>
+
+      <!--cor da bordas, mb-1 espaçamento-->
+    <div class="mb-1 border border-success p-3">Borda verde</div>
+    <div class="mb-1 border border-danger p-3">Borda vermelha</div>
+    <div class="mb-1 border border-info p-3">Borda azul claro</div>
+
+      <hr>
+
+      <!--Botão com ICONE-->
+    <button class="btn btn-primary">
+      <i class="bi bi-check-circle"></i> Botão com INCONE
+    </button>
+      
+      <hr>
+
+      <!--Crinado um CARD-->
+    <div class="card" style="width: 18rem;"><!--Cria um grande card-->
+      <img src="https://placehold.co/600x400" class="card-img-top" alt="Imagem do Card"> <!--Uma imagem selecionada no topo do card-->
+      <div class="card-body"> <!--Corpo restante do card-->
+        <h5 class="card-title">Título do Card</h5> <!--Titulo-->
+        <p class="card-text">Algum texto rápido para descrever o conteúdo docard.</p><!--Um texto-->
+        <a href="#" class="btn btn-primary">Ação</a><!--Um botão-->
+      </div>
+    </div>
+
+      <hr>  
+
+    <!--Crinado um CARD com RODAPÉ-->
+
+    <div class="d-flex gap-3"></div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card com Rodapé</h5>
+        <p class="card-text">Conteúdo principal.</p>
+      </div>
+      <div class="card-footer text-muted">Rodapé do card
+      </div>
+    </div>
+
+      <hr>
+
+    <!--Divs FILHOS-->
+      <div class="d-flex gap-3"> <!--Um ao lado do outro-->
+      <div class="card" style="width: 12rem;">
+        <div class="card-body">
+        <h5 class="card-title">Card com Rodapé</h5>
+        <p class="card-text">Conteúdo principal.</p>
+        </div>
+        <div class="card-footer text-muted">Rodapé do card
+        </div>
+      </div>
+
+      <div class="card" style="width: 12rem;"><div class="card-body">
+        <h5 class="card-title">Card com Rodapé</h5>
+        <p class="card-text">Conteúdo principal.</p>
+        </div>
+        <div class="card-footer text-muted">Rodapé do card
+        </div>
+      </div>
+
+      <div class="card" style="width: 12rem;"><div class="card-body">
+        <h5 class="card-title">Card com Rodapé</h5>
+        <p class="card-text">Conteúdo principal.</p>
+        </div>
+        <div class="card-footer text-muted">Rodapé do card
+        </div>
+        </div>
+      </div>
+
+    
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html> 
