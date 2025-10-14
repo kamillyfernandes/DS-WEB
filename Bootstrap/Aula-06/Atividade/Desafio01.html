@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page - Exemplo</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+<!-- Navbar fixa -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <h1 class="navbar-brand fw-bold" href="#">DestinoCerto</h1>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Viagens</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- Section Principal -->
+    <section id="inicio" class="text-center p-2 mt-3">
+        <div class="container text-center mt-4">
+          <h1 class="text-danger fw-bold">Bem-vindo à DestinoCerto</h1>
+          <p class="text-secondary">Aqui você encontra as melhores viagens pelo melhores preços!</p>
+          <a href="#sobre" class="btn btn-primary">Saiba Mais</a>
+
+<!-- Carrossel -->
+          <div id="carouselExample" class="carousel slide p-2 mt-3" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+            </div>
+
+<!--Imagens do Carrosel-->
+      <div class="carousel-inner">
+        <div class="carousel-item active"> <!--Primeira imagem-->
+          <img src="https://i.pinimg.com/1200x/9f/f8/50/9ff8505f50faad0bfa4a7792b9d1f8d9.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+
+        <div class="carousel-item"><!--Segunda imagem-->
+          <img src="https://i.pinimg.com/1200x/03/1c/ae/031caee362fcc132b69184af7a25f16f.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+
+        <div class="carousel-item"><!--Terceira imagem-->
+          <img src="https://i.pinimg.com/1200x/67/37/a3/6737a32af7b1226efbd2bc257bd6ba9e.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+
+ <!-- Controle Onde passar o carrosel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      </div>
+    </div>
+  </section>
+
+<!-- Seção Sobre -->
+    <section id="sobre" class="p-5">
+      <div class="container text-center mt-4">
+        <h1 class="text-danger fw-bold">Veja mais Informações de viagens aqui </h1>
+
+      <div class="row mt-4 g-4">
+
+   <!-- Grade de Informações onde  vai ter as imagens no Cards -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="https://i.pinimg.com/736x/f2/e7/8f/f2e78f2549ef6893e4be4d93f57545b8.jpg" class="card-img-top" alt="Produto 1">
+            <div class="card-body">
+              <h5 class="card-title">Lago</h5>
+              <p class="card-text">Experiencia unica,  com viagem de barco por esse lago extraordinario</p>
+              <p class="fw-bold text-success">R$ 3999,99</p>
+              <a href="#" class="btn btn-primary">Viajar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="https://i.pinimg.com/736x/8a/ce/f1/8acef1d7f568b411ade269cfc16488da.jpg" class="card-img-top" alt="Produto 2">
+            <div class="card-body">
+              <h5 class="card-title">Cachoeira</h5>
+              <p class="card-text">tTrilha, com direito a visita a cachoeira</p>
+              <p class="fw-bold text-success">R$ 980,90</p>
+              <a href="#" class="btn btn-primary">Viajar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="https://i.pinimg.com/736x/e3/cc/d2/e3ccd2c5fc0f0ff3dd6d7c1b71a8295d.jpg" class="card-img-top" alt="Produto 3">
+            <div class="card-body">
+              <h5 class="card-title">Praia</h5>
+              <p class="card-text">Praia com vista privilegiada do mar</p>
+              <p class="fw-bold text-success">R$ 1980,90</p>
+              <a href="#" class="btn btn-primary">Viajar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="https://i.pinimg.com/736x/90/e7/9b/90e79b7f6aa18b44d8ab1252b9e89f8b.jpg" class="card-img-top" alt="Chachorrinhos">
+            <div class="card-body">
+              <h5 class="card-title">Caverna</h5>
+              <p class="card-text">Lugar aconchegante com vista linda</p>
+              <p class="fw-bold text-success">R$ 2,000</p>
+              <a href="#" class="btn btn-primary">Viajar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- Sequetion de duvidas-->
+      <section id="faq" class="container my-5">
+        <h2 class="text-center mb-4 text-danger ">Dúvidas Frequentes</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                Quais formas de pagamento vocês aceitam?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Aceitamos cartões de crédito, PIX e boleto bancário.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Quais documentos são necessários para viajar?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Para viagens nacionais, basta RG ou CNH. Para internacionais, é necessário passaporte válido e, dependendo do destino, visto.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Posso cancelar ou remarcar minha viagem?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sim! Consulte nossa política de cancelamento e remarcação. Geralmente é possível com aviso prévio e pode haver taxa dependendo do pacote.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="text-center py-5 bg-light">
+        <div class="container">
+          <h2 class="mb-4">Fale Conosco</h2>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contatoModal">
+            Entre em contato
+          </button>
+        </div>
+
+        <div class="modal fade" id="contatoModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Formulário de Contato</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label">Nome</label>
+                    <input type="text" class="form-control" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">E-mail</label>
+                    <input type="email" class="form-control" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Mensagem</label>
+                    <textarea class="form-control" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé fixo no final -->
+    <footer class=" text-white text-center p-3 mt-auto">
+      DestinoCerto - Kamilly Fernandes
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

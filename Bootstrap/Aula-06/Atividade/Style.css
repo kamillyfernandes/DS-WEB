@@ -1,0 +1,20 @@
+body {
+  padding-top: 80px; /*Não deixa conteudo atrás do NavBar*/
+}
+.carousel-item img { 
+    height: 500px;      /* Lartura */
+    object-fit: cover;  /* mantém a proporção da imagem e corta excesso */
+}
+.navbar-custom {
+    background-color: #ad083d; /* cor desejada */
+}
+#carouselExample {
+    background-color: #ffcaf4; /* cor de fundo azul clarinho */
+    border-radius: 10px;        /* opcional, deixa bordas arredondadas */
+    padding: 100px;              /* espaço interno */
+}
+footer {
+    background-color: #ad083d; /*Cor do rodape */
+
+}
+
