@@ -1,0 +1,186 @@
+body {
+    background-color:#fde5c5;
+   
+}
+.content {
+    margin: 0 auto;
+    width: 800px;
+}
+.formulario {
+    margin: auto;
+    width: 750px;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px 30px 30px;
+    border-radius: 80px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form{
+    width: 100%;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px 0px 8px 0px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type=submit] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #30a93c;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input:hover[type=submit] {
+    background-color: #146a16;
+}
+
+/* Mensagens de erro */
+.erro-input {
+    color: red;
+    font-size: 15px;
+}
+
+/* Tirando estilo de links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Código CSS do Menu Horizontal*/
+ul {
+    width: 100%; 
+    float: left; 
+    text-align: center; 
+    padding-inline-start: 0px;
+}
+li {
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline-block;
+    list-style: none;
+}
+li .meumenu {
+   font-family: 'open_sansbold';
+   font-size: 1.6em;
+   text-decoration: none;
+   color: #092c7c;
+   border: 0 1px 0 0 #8da5ec;
+   border-bottom: 4px solid transparent;
+   transition: border-bottom .3s linear;
+}
+li .meumenu:hover {
+    border-bottom: 4px solid #30a93c;
+}
+li .meumenu-active {
+    border-bottom: 4px solid #146a16;
+}
+
+
+
+
+/* Mensagens de aviso */
+#aviso {
+    color: red;
+    font-size: 12px;
+}
+
+
+
+
+.hero{
+    width: 100% ;
+    height: 100% ;
+    background: linear-gradient(45deg, #6ac1c5, #bda5ff);
+    position: relative;
+}
+
+#calendario{
+  width: 80% ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+
+/* -- Estilo da imagem home -- */ 
+
+.user-phote img{
+    display: block;
+    margin-left: 0%;
+    width: 20px; /* ou outro tamanho desejado */
+    height: 30px;
+    background-color: white;
+}
+
+/* -- Estilo da imagem -- */ 
+
+.usuarioimg{
+  width: 10vw;
+  padding: 15px;
+  z-index: 2; /* Para sobrepor o menu */
+}
+
+.usuarioimg img{
+  width: 70px; /* ou outro tamanho desejado */
+  height: 70px;
+}
+
+.usuarioimg button{
+  border-radius: 17px;
+}
+
+.div-phote{
+  padding-right: 20px;
+}
+
+.div-phote p{
+  color: #666;
+  text-align: center;
+}
+
+.phote-user{
+  height: 200px;
+  right: 200px;
+  border-radius: 40%;
+}
+
+.div-button-edit{
+  margin: 0 auto;
+  width: 180px;
+}
+
+.button-edit{
+  margin-top: 15px;
+  width: 180;
+  padding: 10px;
+  border: 1px solid #ffbf00;
+  background-color: #ccc;
+  color: ffbf00;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-edit:hover[type=submit] {
+  border: 1px solid #ffbf00;
+  background-color: #ffbf00;
+  color: white;
+}
+
+
+
+

@@ -1,0 +1,423 @@
+<?php
+session_start();
+
+if(isset($_SESSION['email']) and isset($_SESSION['senha'])){
+
+}else{
+    header('Location: index.php');
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REviva</title>
+    <link rel="shortcut icon" type="imagex/png" href="./assets/img/ico.svg">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<style>
+    body {
+            background-image: url("");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-image: url('assets/img/fundohorta.jpg'); /* Caminho da imagem */
+            background-size: cover;         /* A imagem cobre toda a tela */
+            background-repeat: no-repeat;   /* Não repete a imagem */
+            background-position: center;    /* Centraliza a imagem */
+            background-attachment: fixed;   /* 🔒 Fixa o fundo */
+            min-height: 100vh;              /* Garante altura mínima da tela */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        
+</style>
+<body>
+    <div class="container">
+        <div class="usuarioimg">
+            <form action="perfil.php">
+                <button onclick="redirecionamento()"><img id="previewImagem" src="<?=!empty($fotoUsuario) ? "./assets/img/" . $fotoUsuario : "./assets/img/user.png" ;?>" class="phote-user" alt="">Perfil</button>
+            </form>
+        </div>
+        <div class="container-menu">
+            <div class="menu">
+                <ul>
+                    <li><a href="home.php" class="meumenu" title="Home">Home</a></li>
+                    <li><a href="calendario.php" class="meumenu" title="Calendario">Calendario</a></li>
+                    <li><a href="nossahorta.php" class="meumenu meumenu-active" title="nossahorta">Nossa Horta</a></li>
+                    <li><a href="logout.php" class="meumenu" title="Logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="horta">
+        <h2> Bem-vindo à nossa Horta escolar! </h2><hr><br>
+        <h5>Aqui você encontra informações sobre as plantas cultivadas no nosso espaço escolar, com dicas de como cuidar delas, entender suas necessidades e saber de seus benefícios.</h5>
+        <br><h5>As plantas presentes na escola são:</h5>
+        
+
+        <div class="container mt-5">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <?php
+                    $dir = "imagens/";
+                    $imagens = glob($dir . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+                    $primeira = true;
+
+                    foreach ($imagens as $imagem) {
+                        echo '<div class="carousel-item ' . ($primeira ? 'active' : '') . '">';
+                        echo '<img src="' . $imagem . '" class="d-block w-100" alt="...">';
+                        echo '</div>';
+                        $primeira = false;
+                    }
+                    ?>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+        <div class="alfavaca">
+            <br><br><br>
+            <h2>1. Alfavaca (Ocimum basilicum)</h2>
+
+            <img src="plantas/alfavaca.jpg" alt="Foto da planta Alfavaca" />
+
+            
+            <h3> Informações Técnicas</h3>
+
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Início da manhã ou fim da tarde.<br></p>
+            <p>💧 <strong>Frequência de irrigação:</strong> 1 vez ao dia (evitar encharcar o solo).<br></p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Sol pleno – pelo menos 6 horas de sol direto por dia.<br></p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 18 °C e 30 °C.<br></p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Planta anual, pode ser colhida entre 40 e 60 dias.<br></p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solos bem drenados e ricos em matéria orgânica.<br></p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Fazer podas regulares e retirar as flores para prolongar o ciclo da planta.<br></p>
+
+            <hr>
+
+            <h3> Curiosidades e Usos</h3>
+
+            <p>A alfavaca, também conhecida como manjericão-de-folha-larga, é uma planta aromática que vai além do seu sabor delicioso — ela carrega história, espiritualidade e muitos benefícios para a saúde.<br></p>
+          
+            <p><strong>🌍 Uma planta com raízes ancestrais:</strong> Originária da Ásia, a alfavaca é usada há séculos na Índia como planta sagrada, sendo chamada de tulsi. No Brasil, tem forte presença nas religiões afro-brasileiras, como o Candomblé e a Umbanda, sendo considerada uma erva de limpeza espiritual, proteção e força.<br></p>
+            
+            <p><strong>🍝 Um toque de sabor na cozinha:</strong> Com um sabor intenso e levemente adocicado, a alfavaca é usada em caldos, molhos, massas e pratos típicos brasileiros, especialmente no Norte e Nordeste. Ela combina bem com tomates e peixes. O ideal é adicionar as folhas no fim do preparo para preservar o aroma.<br></p>
+            
+            <p><strong>🌸 Fácil de cuidar e cheia de vida:</strong> Essa planta adora o sol, precisa de rega diária (sem encharcar) e cresce rápido. Pode ser cultivada em vasos, jardineiras ou canteiros. Fazer podas regulares estimula novos brotos e evita que a planta floresça precocemente, o que pode reduzir a produção de folhas.<br></p>
+            
+            <hr>
+
+            <h3> Curiosidades rápidas</h3>
+
+            <p>🐝 Atrai abelhas e polinizadores.<br></p>
+            <p>🧼 Usada em banhos de proteção espiritual.<br></p>
+            <p>🍃 Existem várias variedades (cravo, roxa, anisada).<br></p>
+            <p>🌿 Perfeita para plantar junto com tomates (ajuda a afastar pragas).<br></p>
+            <hr>
+        </div>
+
+        <div class="acafrao">
+
+            <h2>2. Açafrão-da-Terra (Curcuma longa)</h2>
+            <img src="plantas/acafrao.jpg" alt="Foto do acafrao" />
+            
+
+            <h3> Informações Técnicas</h3>
+            
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Início da manhã ou fim da tarde.</p>
+            <p>💧 <strong>Frequência de irrigação:</strong> 2 a 3 vezes por semana, mantendo o solo levemente úmido.</p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Sol pleno ou meia-sombra.</p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 20 °C e 35 °C.</p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Aproximadamente 8 a 10 meses até a colheita dos rizomas.</p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solos soltos, úmidos e ricos em matéria orgânica.</p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Evitar excesso de água; o solo deve ser bem drenado para prevenir apodrecimento da raiz.</p>
+            
+        
+            <hr>
+            
+            <h3> Curiosidades e Usos</h3>
+            <p>O açafrão-da-terra, também conhecido como cúrcuma, é uma raiz dourada poderosa, usada há mais de 4 mil anos tanto na medicina tradicional quanto na culinária e em rituais. É considerado um verdadeiro ouro da terra — não só pela cor vibrante, mas por seus inúmeros benefícios.</p>
+            <p><strong>🌍 Uma raiz com história milenar:</strong> Originário do sul da Ásia, especialmente da Índia, o açafrão é uma planta sagrada no hinduísmo e um dos principais ingredientes da medicina ayurvédica. Foi trazido ao Brasil pelos colonizadores e se adaptou muito bem ao solo e ao clima tropicais.</p>
+            
+            <p><strong>💡 Um truque importante:</strong> para ativar melhor a curcumina, combine a cúrcuma com uma pitada de pimenta-do-reino preta e uma fonte de gordura (como azeite ou leite vegetal).</p>
+            
+            <p><strong>🍲 Culinária colorida e cheia de sabor:</strong> Muito usada na culinária indiana e brasileira, o açafrão dá cor, aroma e um sabor terroso suave aos alimentos. É essencial no preparo de temperos, caldos, risotos, arroz amarelinho e até sucos funcionais. Além disso, é o ingrediente principal do famoso "leite dourado" (golden milk), bebida quente usada para relaxar, fortalecer o corpo e acalmar a mente.</p>
+            
+            <p><strong>🌱 Cultivo fácil e potente:</strong> O açafrão é cultivado a partir de rizomas (como gengibre) e gosta de ambientes úmidos e quentes. Planta-se o pedaço da raiz diretamente na terra e, depois de alguns meses, a planta começa a soltar folhas grandes e verdes. A colheita é feita quando as folhas começam a secar, indicando que os rizomas já estão maduros. Você pode plantar em canteiros ou vasos grandes, desde que o solo esteja sempre bem drenado.</p>
+
+           <hr>
+
+            <h3>Curiosidades rápidas</h3>
+            <p>✨ A cúrcuma é considerada uma planta espiritual, usada para purificação e proteção.</p>
+            <p>🧡 Sua cor amarela intensa já foi usada como tinta natural e até em tecidos.</p>
+            <p>🧴 É usada na cosmética natural: ajuda a tratar acne, clarear manchas e reduzir inflamações da pele.</p>
+            <p>👩‍🌾 Você pode guardar uma parte do rizoma colhido para replantar na próxima safra.</p>
+            <hr>
+        </div>
+
+        <br><br><br>
+
+        <div class="loro">
+
+            <h2>3. Loro (Plectranthus amboinicus)</h2>
+            <img src="plantas/loro.jpg" alt="Foto do loro" />
+
+            <h3> Informações Técnicas</h3>
+
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Manhã cedo ou fim de tarde.</p>
+            <p>💧 <strong>Frequência de irrigação:</strong> 2 a 3 vezes por semana, solo úmido, mas sem encharcar.</p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Meia sombra a sol pleno (4 a 6 horas de sol direto).</p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 20 °C e 30 °C.</p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Perene, pode ser colhido a partir de 60 dias, com folhas renováveis.</p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solo fértil, bem drenado, rico em matéria orgânica.</p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Podar regularmente para estimular brotações e evitar o envelhecimento das folhas.</p>
+
+            <hr>
+
+            <h3> Curiosidades e Usos</h3>
+
+            <p>O Loro, também chamado de “erva-cidreira-do-campo” ou “hortelã-do-mato”, é uma planta medicinal e aromática muito popular em jardins brasileiros, conhecida pelo seu aroma marcante e propriedades terapêuticas.</p>
+
+            <p><strong>🌍 Uma planta versátil e resistente:</strong> Originário da África e adaptado a climas tropicais, o Loro é muito resistente e cresce facilmente em diferentes tipos de solo e ambientes, sendo muito usado em hortas caseiras e vasos. No Brasil, é bastante valorizado no nordeste, onde o clima quente favorece seu cultivo.</p>
+
+           <p><strong>🍲 Na cozinha, um aroma marcante:</strong> O Loro pode ser usado para temperar carnes, sopas e ensopados, trazendo um sabor forte e levemente picante, similar ao orégano com um toque de hortelã. As folhas devem ser adicionadas no início do cozimento para liberar todo o aroma.</p>
+
+            <p><strong>🌿 Cultivo fácil e gratificante:</strong> É uma planta de crescimento rápido, que responde bem a podas frequentes, garantindo folhas frescas o ano todo. Pode ser cultivada em vasos, jardineiras ou diretamente no solo, desde que receba luz moderada e não fique encharcada.</p>
+
+            <hr>
+
+            <h3> Curiosidades rápidas</h3>
+
+            <p>🐝 Atrai abelhas e borboletas para o jardim.</p>
+            <p>🌱 Também usada em rituais de limpeza energética e proteção espiritual.</p>
+            <p>🍃 Folhas carnudas e suculentas, que ajudam a conservar a umidade.</p>
+            <p>🌿 Planta companheira ideal para hortelã e manjericão, pois não compete por nutrientes.</p>
+            <hr>
+
+        </div>
+
+        <br><br><br>
+
+        <div class="couve">
+
+            <h2>4. Couve (Brassica oleracea var. acephala)</h2> 
+            <img src="plantas/couve.jpg" alt="Foto da couve" />
+
+            <h3> Informações Técnicas</h3>
+
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Manhã cedo ou fim de tarde.</p>
+            <p>💧 <strong>Frequência de irrigação:</strong> 3 a 4 vezes por semana, mantendo o solo sempre úmido, mas sem encharcar.</p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Sol pleno a meia sombra (mínimo de 4 horas de sol direto por dia).</p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 15 °C e 25 °C, prefere clima ameno.</p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Planta bienal, geralmente cultivada como anual, colheita entre 60 a 90 dias.</p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solo fértil, rico em matéria orgânica e bem drenado.</p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Fazer podas regulares retirando folhas externas para estimular o crescimento.</p>
+
+            <hr>
+
+            <h3> Curiosidades e Usos</h3>
+
+            <p>A couve é um dos vegetais mais tradicionais e nutritivos da culinária brasileira, essencial em pratos típicos como a feijoada e a sopa de legumes. Além disso, é uma planta riquíssima em nutrientes e com grande importância na agricultura familiar.</p>
+
+            <p><strong>🌍 Uma planta de grande valor histórico e cultural:</strong> Originária da Europa, a couve foi trazida para o Brasil e rapidamente incorporada à alimentação popular. É símbolo de saúde e resistência, sendo cultivada em quase todas as regiões do país, especialmente em hortas caseiras.</p>
+
+            <p><strong>🍲 Culinária versátil e saborosa:</strong> Com sabor levemente amargo e textura firme, a couve é perfeita para refogados, saladas, sucos verdes e também pode ser usada como “embrulho” para pratos como o charuto de couve. Cozinhar rapidamente ajuda a preservar os nutrientes e a cor vibrante das folhas.</p>
+
+            <p><strong>🌱 Cultivo acessível e produtivo:</strong> A couve é fácil de cultivar, requer solo fértil e irrigação regular para garantir folhas macias e saborosas. É uma planta resistente a pragas, mas pode se beneficiar de podas para melhorar a circulação de ar e estimular o crescimento. Pode ser cultivada em canteiros, vasos grandes ou hortas urbanas.</p>
+
+            <hr>
+
+            <h3> Curiosidades rápidas</h3>
+
+            <p>🐝 Atrai polinizadores como abelhas e borboletas.</p>
+            <p>🥬 Pode ser consumida crua ou cozida, mantendo seus nutrientes.</p>
+            <p>🌿 A couve manteiga é a variedade mais comum no Brasil.</p>
+            <p>🍃 Suas folhas externas são as primeiras a serem colhidas, dando espaço para novas folhas crescerem.</p>
+            <hr>
+
+        </div>
+
+        <br><br><br>
+
+        <div class="alface">
+
+            <h2>5. Alface (Lactuca sativa)</h2>
+            <img src="plantas/alface.jpg" alt="Foto do alface" />
+
+
+            <h3> Informações Técnicas</h3>
+
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Manhã cedo ou fim de tarde.</p>
+            <p>💧 <strong>Frequência de irrigação:</strong> Diária ou a cada 2 dias, solo sempre úmido, mas sem encharcar.</p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Sol pleno a meia sombra (4 a 6 horas de sol direto por dia).</p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 15 °C e 22 °C, prefere clima fresco.</p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Planta anual, colheita entre 30 e 60 dias, dependendo da variedade.</p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solo leve, fértil e bem drenado, rico em matéria orgânica.</p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Evitar o excesso de nitrogênio para não estimular crescimento excessivo e folhas amargas.</p>
+
+            <hr>
+
+            <h3> Curiosidades e Usos</h3>
+
+            <p>O alface é uma das hortaliças mais consumidas no mundo, conhecido pela sua leveza e frescor que complementam saladas e pratos diversos. É versátil, fácil de cultivar e oferece muitos benefícios nutricionais.</p>
+
+            <p><strong>🌍 História e cultivo milenar:</strong> Originário da Europa e Ásia, o alface era cultivado pelos antigos egípcios já em 2500 a.C., inicialmente usado por suas sementes oleosas. Hoje, é cultivado em quase todo o planeta, com milhares de variedades adaptadas a diferentes climas e gostos.</p>
+
+            <p><strong>🥗 Na cozinha, versatilidade e sabor delicado:</strong> Ideal para saladas frescas, sanduíches e wraps, o alface tem sabor suave e textura crocante. Pode ser consumido cru ou levemente cozido, mas perde sua crocância quando exposto ao calor por muito tempo. Variedades como alface crespa, americana e romana trazem diferentes texturas e aparências.</p>
+
+            <p><strong>🌱 Cultivo simples e produtivo:</strong> O alface cresce rapidamente e pode ser cultivado em vasos, hortas urbanas ou grandes plantações. Requer solo fértil, irrigação frequente e proteção contra calor intenso para evitar que “espigue” (florir precocemente). A colheita pode ser feita folha a folha ou da planta inteira, conforme a preferência.</p>
+
+            <hr>
+
+            <h3> Curiosidades rápidas</h3>
+
+            <p>🐝 Atrai polinizadores que ajudam no jardim.</p>
+            <p>🥗 Pode ser cultivado o ano todo em regiões de clima ameno.</p>
+            <p>🌿 Suas folhas têm efeito diurético natural.</p>
+            <p>🍃 A alface romana é conhecida por sua textura firme e sabor levemente adocicado.</p>
+            <hr>
+
+        </div>
+
+        <br><br><br>
+
+        <div class="abacaxi">
+
+            <h2>6. Abacaxi (Ananas comosus)</h2>
+            <img src="plantas/abacaxi.jpg" alt="Foto do abacaxi" />
+
+            <h3> Informações Técnicas</h3>
+
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Manhã cedo ou fim de tarde.</p>
+            <p>💧 <strong>Frequência de irrigação:</strong> 2 a 3 vezes por semana, evitando encharcamento.</p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Sol pleno – pelo menos 6 horas de sol direto por dia.</p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 20 °C e 30 °C.</p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Planta perene, o fruto leva de 12 a 18 meses para amadurecer.</p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solo bem drenado, arenoso, com pH entre 4,5 e 6,5.</p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Remover folhas secas e capinar para evitar competição por nutrientes.</p>
+
+            <hr>
+
+            <h3> Curiosidades e Usos</h3>
+
+            <p>O abacaxi é uma fruta tropical muito apreciada pelo sabor doce e refrescante, além de ser fonte de nutrientes essenciais e compostos bioativos que trazem diversos benefícios para a saúde.</p>
+
+            <p><strong>🌍 Uma fruta com história de resistência e adaptação:</strong> Originário da América do Sul, possivelmente das regiões entre Brasil, Paraguai e Argentina, o abacaxi era cultivado pelas populações indígenas muito antes da chegada dos europeus. Hoje, é uma das frutas tropicais mais cultivadas e exportadas no mundo.</p>
+
+            <p><strong>🍍 Sabor e versatilidade na culinária:</strong> O abacaxi pode ser consumido fresco, em sucos, sobremesas, pratos salgados e até em churrascos. Seu sabor equilibrado entre doce e ácido o torna ingrediente ideal para marinadas e molhos. Também pode ser usado para amaciar carnes devido à bromelina.</p>
+
+            <p><strong>🌿 Cultivo e cuidados:</strong> Planta que se adapta bem a climas quentes e solo com boa drenagem. O abacaxi se reproduz facilmente por meio de mudas retiradas da coroa da fruta. Embora o cultivo demande tempo até a frutificação, a planta é resistente e requer pouca irrigação depois do estabelecimento.</p>
+
+            <hr>
+
+            <h3> Curiosidades rápidas</h3>
+
+            <p>🐝 Atrai polinizadores importantes como abelhas e beija-flores.</p>
+            <p>🍍 A bromelina do abacaxi é usada na indústria farmacêutica e de alimentos.</p>
+            <p>🌿 Pode ser cultivado em vasos grandes e jardins tropicais.</p>
+            <p>🌞 Prefere regiões com bastante sol e pouca umidade excessiva.</p>
+            <hr>
+
+        </div>
+
+        <br><br><br>
+
+        <div class="feijao">
+
+            <h2>7. Feijão (Phaseolus vulgaris)</h2>
+            <img src="plantas/feijao.jpg" alt="Foto do feijao" />
+
+            <h3> Informações Técnicas</h3>
+
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Manhã cedo ou fim da tarde.</p>
+            <p>💧 <strong>Frequência de irrigação:</strong> 2 a 3 vezes por semana, mantendo o solo úmido, sem encharcar.</p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Sol pleno – pelo menos 6 horas de sol direto por dia.</p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 18 °C e 28 °C.</p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Anual, colheita entre 70 a 100 dias, dependendo da variedade.</p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solo fértil, bem drenado, com pH entre 5,5 e 6,8.</p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Fazer capinas para evitar competição por nutrientes e controle de pragas.</p>
+
+            <hr>
+
+            <h3> Curiosidades e Usos</h3>
+
+            <p>O feijão é um dos alimentos mais importantes da alimentação brasileira, fonte rica em proteínas, fibras e minerais essenciais. Além do valor nutricional, é uma planta simbólica na agricultura familiar e na cultura do país.</p>
+
+            <p><strong>🌍 Origem e diversidade:</strong> Originário da América Central e do Sul, o feijão tem milhares de variedades cultivadas mundialmente, adaptadas a diferentes climas e solos. No Brasil, as variedades mais comuns são o feijão-carioca, preto e vermelho.</p>
+
+            <p><strong>🍲 Na cozinha, versatilidade e tradição:</strong> Base de pratos típicos como feijoada, arroz com feijão e saladas, o feijão é ingrediente essencial na dieta diária. Pode ser preparado em caldos, sopas, refogados ou saladas, e é conhecido pelo seu sabor marcante e nutritivo.</p>
+
+            <p><strong>🌱 Cultivo e cuidados:</strong> O feijão é planta que exige solo bem drenado e exposição ao sol pleno. Prefere temperaturas amenas e regas moderadas. A rotação de culturas é recomendada para manter a saúde do solo e evitar pragas e doenças.</p>
+
+            <hr>
+
+            <h3> Curiosidades rápidas</h3>
+
+            <p>🌱 Fixador de nitrogênio, melhora a fertilidade do solo.</p>
+            <p>🐝 Atrai polinizadores que beneficiam outras plantas da horta.</p>
+            <p>🍛 O feijão-preto é usado em pratos típicos da culinária brasileira, especialmente no Sudeste.</p>
+            <p>🌾 Pode ser cultivado em consórcio com milho para otimizar espaço e nutrientes.</p>
+            <hr>
+
+        </div>
+
+        <br><br><br>
+
+        <div class="alecrim">
+
+            <h2>8. Alecrim (Rosmarinus officinalis)</h2>
+            <img src="plantas/alecrim.jpg" alt="Foto do alecrim" />
+
+            <h3> Informações Técnicas</h3>
+
+            <p>🕒 <strong>Horário ideal de irrigação:</strong> Manhã cedo ou fim da tarde.</p>
+            <p>💧 <strong>Frequência de irrigação:</strong> 2 vezes por semana, solo bem drenado e não encharcado.</p>
+            <p>☀️ <strong>Exposição ao sol:</strong> Sol pleno – pelo menos 6 horas de sol direto por dia.</p>
+            <p>🌡️ <strong>Temperatura ideal:</strong> Entre 15 °C e 28 °C.</p>
+            <p>⏳ <strong>Ciclo de cultivo:</strong> Planta perene, colheita contínua das folhas após 60 dias.</p>
+            <p>📍 <strong>Ambiente ideal:</strong> Solo arenoso, leve, com boa drenagem.</p>
+            <p>✂️ <strong>Dica de cuidado:</strong> Podar regularmente para estimular o crescimento e evitar o endurecimento dos galhos.</p>
+
+            <hr>
+
+            <h3> Curiosidades e Usos</h3>
+
+            <p>O alecrim é uma erva aromática muito valorizada por seu aroma marcante e propriedades medicinais, além de seu uso na culinária e na aromaterapia.</p>
+
+            <p><strong>🌍 Origem mediterrânea e história rica:</strong> Originário da região do Mediterrâneo, o alecrim tem sido cultivado e utilizado desde a antiguidade em rituais, medicina e culinária. No Brasil, adaptou-se bem e é muito popular em hortas caseiras e jardins.</p>
+
+            <p><strong>🍽️ Na cozinha, um toque especial:</strong> Com sabor forte, levemente amadeirado e refrescante, o alecrim é excelente para temperar carnes, batatas, pães e molhos. Suas folhas podem ser usadas frescas ou secas, sendo adicionadas no início do cozimento para liberar todo o aroma.</p>
+
+            <p><strong>🌿 Cultivo fácil e resistente:</strong> O alecrim é uma planta rústica que tolera solos pobres e períodos de seca. Prefere locais ensolarados e solo bem drenado para evitar apodrecimento das raízes. A poda frequente ajuda a manter a planta saudável e vigorosa.</p>
+
+            <hr>
+
+            <h3> Curiosidades rápidas</h3>
+
+            <p>🐝 Atrai abelhas e outros polinizadores.</p>
+            <p>🌿 Muito usado em banhos energéticos e rituais de proteção.</p>
+            <p>🍃 Óleo essencial de alecrim é usado em cosméticos e aromaterapia.</p>
+            <p>🌱 Pode ser cultivado em vasos, jardineiras ou diretamente no solo.</p>
+            <hr>
+
+    </div>
+</div>
+
+       

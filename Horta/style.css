@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(96, 193, 96);
+    padding-top: 80px; /*Não deixa conteudo atrás do NavBar*/
+  }
+  .carousel-item img { 
+      height: 700px;      /* Largura */
+      object-fit: cover;  /* mantém a proporção da imagem e corta excesso */
+  }
+  .navbar-custom {
+      background-color: #0fb81a; /* cor desejada */
+  }
+  #carouselExample {
+      background-color: #15c34f; /* cor de fundo azul clarinho */
+      border-radius: 10px;        /* opcional, deixa bordas arredondadas */
+      padding: 100px;              /* espaço interno */
+  }
+  footer {
+      background-color: #1bad08; /*Cor do rodape */
+  
+  }
+  .linha {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 6px;
+  }
+  
+  .icone {
+    width: 30px; /* ajuste se quiser */
+    display: inline-block;
+  }
